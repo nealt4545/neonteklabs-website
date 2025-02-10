@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>NeonTek Labs</title>
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/neonteklabs.png">
+  <link rel="icon" type="image/png" href="Images/neonteklabs.png">
   <!-- Google Fonts for a futuristic look -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <!-- Bootstrap CSS via CDN -->
@@ -42,7 +42,7 @@
     /* Hero Section Styling */
     .hero {
       background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-                  url('images/AI-Image.jpg') no-repeat center center;
+                  url('Images/AI-Image.jpg') no-repeat center center;
       background-size: cover;
       height: 80vh;
       display: flex;
@@ -125,11 +125,6 @@
       text-align: center;
       color: #00f0ff;
     }
-    /* Button Focus Styles */
-    .btn:focus, .btn:active {
-      box-shadow: none;
-      outline: none;
-    }
   </style>
 </head>
 <body>
@@ -137,21 +132,9 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container">
       <a class="navbar-brand" href="#">
-        <img src="images/neonteklabs.png" alt="NeonTek Labs Logo">
+        <img src="Images/neonteklabs.png" alt="NeonTek Labs Logo">
         NeonTek Labs
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
     </div>
   </nav>
 
@@ -164,43 +147,32 @@
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" data-aos="fade-up">
-    <div class="container">
-      <h2>About NeonTek Labs</h2>
-      <p>At NeonTek Labs, we specialize in delivering custom AI agent solutions that help businesses automate processes and innovate. With our expertise in AI, machine learning, and automation, we provide tailored services designed to meet your unique business challenges. Embrace the future with us.</p>
-    </div>
-  </section>
-
   <!-- Services Section -->
   <section id="services" class="bg-dark" data-aos="fade-up">
     <div class="container">
       <h2>Our Services</h2>
       <div class="row text-center">
-        <!-- Service 1: Chatbots & Virtual Assistants -->
         <div class="col-md-4 mb-4" data-aos="zoom-in">
           <div class="card">
-            <img src="images/chatbot.png" class="card-img-top" alt="AI Chatbots & Virtual Assistants">
+            <img src="Images/chatbot.png" class="card-img-top" alt="AI Chatbots & Virtual Assistants">
             <div class="card-body">
               <h4 class="card-title">AI Chatbots & Virtual Assistants</h4>
               <p class="card-text">Develop intelligent chatbots to enhance customer support and engagement with futuristic interfaces.</p>
             </div>
           </div>
         </div>
-        <!-- Service 2: Automation Solutions -->
         <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
           <div class="card">
-            <img src="images/automationsolution.png" class="card-img-top" alt="Automation Solutions">
+            <img src="Images/automationsolution.png" class="card-img-top" alt="Automation Solutions">
             <div class="card-body">
               <h4 class="card-title">Automation Solutions</h4>
               <p class="card-text">Streamline your business operations with custom AI automation tools that work seamlessly.</p>
             </div>
           </div>
         </div>
-        <!-- Service 3: Custom AI Development -->
         <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
           <div class="card">
-            <img src="images/aidevelopment.png" class="card-img-top" alt="Custom AI Development">
+            <img src="Images/aidevelopment.png" class="card-img-top" alt="Custom AI Development">
             <div class="card-body">
               <h4 class="card-title">Custom AI Development</h4>
               <p class="card-text">Tailor-made AI solutions designed to address your specific business challenges, powered by innovation.</p>
@@ -211,46 +183,20 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" data-aos="fade-up">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <!-- The form action is set to your Formspree endpoint -->
-      <form action="https://formspree.io/f/xzzdvnjp" method="POST">
-        <div class="mb-3">
-          <label for="name" class="form-label">Name</label>
-          <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
-        </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control" id="email" name="_replyto" placeholder="name@example.com" required>
-        </div>
-        <div class="mb-3">
-          <label for="message" class="form-label">Message</label>
-          <textarea class="form-control" id="message" name="message" rows="3" placeholder="Your Message" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-neon">Send Message</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer (static, no scroll animation) -->
+  <!-- Footer -->
   <footer>
     <div class="container">
       <p>&copy; 2025 NeonTek Labs. All Rights Reserved.</p>
     </div>
   </footer>
 
-  <!-- Bootstrap JS Bundle (includes Popper) via CDN -->
+  <!-- Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- AOS JS (local) -->
+  <!-- AOS JS -->
   <script src="aos-master/dist/aos.js"></script>
   <script>
-    AOS.init({
-      duration: 1000,  // Animation duration in milliseconds
-      once: false,     // Animate every time the element enters the viewport
-      mirror: true     // Enable animations when scrolling up as well
-    });
+    AOS.init({ duration: 1000, once: false, mirror: true });
   </script>
 </body>
 </html>
+
