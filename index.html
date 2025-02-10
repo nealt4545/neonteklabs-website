@@ -33,12 +33,6 @@
     .navbar-brand:hover, .nav-link:hover {
       color: #ffffff !important;
     }
-    .navbar-brand img {
-      height: 50px;
-      margin-right: 10px;
-      border-radius: 50%;
-      border: 2px solid #00f0ff;
-    }
     /* Hero Section Styling */
     .hero {
       background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -50,19 +44,6 @@
       justify-content: center;
       text-align: center;
       position: relative;
-    }
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-    }
-    .hero .container {
-      position: relative;
-      z-index: 2;
     }
     .hero h1 {
       font-size: 4rem;
@@ -103,20 +84,6 @@
     p {
       color: #cccccc;
     }
-    /* Services Cards */
-    .card {
-      background: transparent;
-      border: none;
-    }
-    .card-img-top {
-      max-height: 150px;
-      width: auto;
-      margin: 0 auto;
-    }
-    .card-title {
-      color: #00f0ff;
-      margin-top: 15px;
-    }
     /* Footer Styling */
     footer {
       background-color: #141414;
@@ -132,7 +99,7 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container">
       <a class="navbar-brand" href="#">
-        <img src="https://raw.githubusercontent.com/nealt4545/neonteklabs-website/main/Images/neonteklabs.png" alt="NeonTek Labs Logo">
+        <img src="https://raw.githubusercontent.com/nealt4545/neonteklabs-website/main/Images/neonteklabs.png" alt="NeonTek Labs Logo" height="50">
         NeonTek Labs
       </a>
     </div>
@@ -180,6 +147,28 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" data-aos="fade-up">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form action="https://formspree.io/f/xzzdvnjp" method="POST">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" name="_replyto" placeholder="name@example.com" required>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control" id="message" name="message" rows="3" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-neon">Send Message</button>
+      </form>
     </div>
   </section>
 
