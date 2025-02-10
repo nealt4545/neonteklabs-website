@@ -33,6 +33,12 @@
     .navbar-brand:hover, .nav-link:hover {
       color: #ffffff !important;
     }
+    .navbar-brand img {
+      height: 50px;
+      margin-right: 10px;
+      border-radius: 50%;
+      border: 2px solid #00f0ff;
+    }
     /* Hero Section Styling */
     .hero {
       background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -44,6 +50,19 @@
       justify-content: center;
       text-align: center;
       position: relative;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    .hero .container {
+      position: relative;
+      z-index: 2;
     }
     .hero h1 {
       font-size: 4rem;
@@ -84,6 +103,20 @@
     p {
       color: #cccccc;
     }
+    /* Services Cards */
+    .card {
+      background: transparent;
+      border: none;
+    }
+    .card-img-top {
+      max-height: 150px;
+      width: auto;
+      margin: 0 auto;
+    }
+    .card-title {
+      color: #00f0ff;
+      margin-top: 15px;
+    }
     /* Footer Styling */
     footer {
       background-color: #141414;
@@ -92,6 +125,11 @@
       text-align: center;
       color: #00f0ff;
     }
+    /* Button Focus Styles */
+    .btn:focus, .btn:active {
+      box-shadow: none;
+      outline: none;
+    }
   </style>
 </head>
 <body>
@@ -99,9 +137,21 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container">
       <a class="navbar-brand" href="#">
-        <img src="https://raw.githubusercontent.com/nealt4545/neonteklabs-website/main/Images/neonteklabs.png" alt="NeonTek Labs Logo" height="50">
+        <img src="https://raw.githubusercontent.com/nealt4545/neonteklabs-website/main/Images/neonteklabs.png" alt="NeonTek Labs Logo">
         NeonTek Labs
       </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
@@ -114,11 +164,20 @@
     </div>
   </section>
 
+  <!-- About Section -->
+  <section id="about" data-aos="fade-up">
+    <div class="container">
+      <h2>About NeonTek Labs</h2>
+      <p>At NeonTek Labs, we specialize in delivering custom AI agent solutions that help businesses automate processes and innovate. With our expertise in AI, machine learning, and automation, we provide tailored services designed to meet your unique business challenges. Embrace the future with us.</p>
+    </div>
+  </section>
+
   <!-- Services Section -->
   <section id="services" class="bg-dark" data-aos="fade-up">
     <div class="container">
       <h2>Our Services</h2>
       <div class="row text-center">
+        <!-- Service 1: Chatbots & Virtual Assistants -->
         <div class="col-md-4 mb-4" data-aos="zoom-in">
           <div class="card">
             <img src="https://raw.githubusercontent.com/nealt4545/neonteklabs-website/main/Images/chatbot.png" class="card-img-top" alt="AI Chatbots & Virtual Assistants">
@@ -128,6 +187,7 @@
             </div>
           </div>
         </div>
+        <!-- Service 2: Automation Solutions -->
         <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
           <div class="card">
             <img src="https://raw.githubusercontent.com/nealt4545/neonteklabs-website/main/Images/automationsolution.png" class="card-img-top" alt="Automation Solutions">
@@ -137,6 +197,7 @@
             </div>
           </div>
         </div>
+        <!-- Service 3: Custom AI Development -->
         <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
           <div class="card">
             <img src="https://raw.githubusercontent.com/nealt4545/neonteklabs-website/main/Images/aidevelopment.png" class="card-img-top" alt="Custom AI Development">
@@ -154,6 +215,7 @@
   <section id="contact" data-aos="fade-up">
     <div class="container">
       <h2>Contact Us</h2>
+      <!-- The form action is set to your Formspree endpoint -->
       <form action="https://formspree.io/f/xzzdvnjp" method="POST">
         <div class="mb-3">
           <label for="name" class="form-label">Name</label>
@@ -172,11 +234,23 @@
     </div>
   </section>
 
-  <!-- Bootstrap JS Bundle -->
+  <!-- Footer (static, no scroll animation) -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 NeonTek Labs. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle (includes Popper) via CDN -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS JS (local) -->
   <script src="aos-master/dist/aos.js"></script>
   <script>
-    AOS.init({ duration: 1000, once: false, mirror: true });
+    AOS.init({
+      duration: 1000,  // Animation duration in milliseconds
+      once: false,     // Animate every time the element enters the viewport
+      mirror: true     // Enable animations when scrolling up as well
+    });
   </script>
 </body>
 </html>
